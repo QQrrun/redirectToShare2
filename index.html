@@ -28,9 +28,12 @@
                     window.location.href = androidUrl;
                 } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
                     // iOS 设备
+                    var start = Date.now();
                     setTimeout(function () {
-                        window.location.href = iosStoreUrl;
-                    }, 25);
+                        if (Date.now() - start < 1500) {
+                            window.location.href = iosStoreUrl;
+                        }
+                    }, 1000);
                     // 尝试打开APP
                     window.location.href = iosUrl;
                 } else {
