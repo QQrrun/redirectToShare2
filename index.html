@@ -21,23 +21,23 @@
                     window.location.href = iosUrl;
                 }else if (/android/i.test(userAgent)) {
                     // Android 设备
-                    var start = Date.now();
-                    setTimeout(function () {
-                        if (Date.now() - start < 1500) {
-                            // 如果APP没有安装，跳转到Google Play
-                            window.location.href = androidStoreUrl;
-                        }
-                    }, 1000);
+                    // var start = Date.now();
+                    // setTimeout(function () {
+                    //     if (Date.now() - start < 1500) {
+                    //         // 如果APP没有安装，跳转到Google Play
+                    //         window.location.href = androidStoreUrl;
+                    //     }
+                    // }, 1000);
                     // 尝试打开APP
                     window.location.href = androidUrl;
                 } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
                     // iOS 设备
-                    var start = Date.now();
-                    setTimeout(function () {
-                        if (Date.now() - start < 1500) {
-                            window.location.href = iosStoreUrl;
-                        }
-                    }, 1000);
+                    // var start = Date.now();
+                    // setTimeout(function () {
+                    //     if (Date.now() - start < 1500) {
+                    //         window.location.href = iosStoreUrl;
+                    //     }
+                    // }, 1000);
                     // 尝试打开APP
                     window.location.href = iosUrl;
                 } else {
